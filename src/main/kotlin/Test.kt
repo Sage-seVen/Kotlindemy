@@ -1,21 +1,10 @@
 /**
- * List of fucntions to test my leetcode submissions
+ * List of functions to test Leetcode submissions
  */
-
-
-class Test {
-    companion object {
-        val root = "aa"
-    }
-
-    fun test(s: String) {
-        val a = s.toCharArray()
-    }
-}
-
 
 class Solution {
 
+    //#13-Start
     fun romanToInt(s: String): Int {
         var total = 0
         var lastSymbol = ' '
@@ -54,6 +43,8 @@ class Solution {
         return intValue
     }
 
+
+    //#1
     fun twoSum(nums: IntArray, target: Int): IntArray {
         for (i in nums.indices) {
             for (j in i + 1..nums.lastIndex) {
@@ -65,6 +56,7 @@ class Solution {
         return intArrayOf(0, 0)
     }
 
+    //#3
     fun lengthOfLongestSubstring(s: String): Int {
         var maxLength = 0
         s.forEachIndexed { index, c ->
@@ -81,6 +73,7 @@ class Solution {
     }
 
 
+    //#DS-1 213
     fun containsDuplicate(nums: IntArray): Grouping<Int, Int> {
         val out =  nums.toList().groupingBy { it }
         return  out
