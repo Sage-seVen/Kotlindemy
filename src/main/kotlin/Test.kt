@@ -87,6 +87,15 @@ class Solution {
 //    Solution().twoSum(nums = intArrayOf(2,5,5,11), target = 10).forEach {
 //        println(it)
 //    }
-        println(solution.lengthOfLongestSubstring("abcabcbb"))
-        println(solution.containsDuplicate( intArrayOf(1,1,1,3,3,4,3,2,4,2)) .toString())
+//        println(solution.lengthOfLongestSubstring("abcabcbb"))
+//        println(solution.containsDuplicate( intArrayOf(1,1,1,3,3,4,3,2,4,2)) .toString())
+
+
+        var arr : Array<Int> = arrayOf<Int>()
+
+//        for(i in 0..3){
+//            arr[i] = i
+//        }
+
+        println(arr.toString())
     }
