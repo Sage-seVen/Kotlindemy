@@ -1,4 +1,4 @@
-class tekion {
+class Tekion {
     fun sortArray(elements: List<Int>): ArrayList<Int> {
 
         var replaced: List<Any> = elements.map {
@@ -41,21 +41,18 @@ class tekion {
 
 
 fun main(){
-
-    val obj = tekion()
+    val obj = Tekion()
 
     val abc = (obj.sortArray( elements = listOf(-1, 3, 1, 4, -11, -12, 21, 11, 5, -2)))
 
     println(abc)
-
 }
 
 /*
 Given an array of numbers, sort such that all the negative numbers position is preserved in output
 in: [-1, 3, 1, 4, -11, -12, 21, 11, 5, -2]
 out: [-1, 1, 3, 4, -11, -12, 5, 11, 21, -2]
-
- */
+*/
 
 
 

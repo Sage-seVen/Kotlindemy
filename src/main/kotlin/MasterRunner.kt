@@ -97,12 +97,9 @@ class Solution {
 
     //#11
     fun maxArea(height: IntArray): Int {
-//        val org = height
-//        height.reverse()
-//        var highestNumber = height[0]
-//        var secondHighest = height[1]
         val areaArr = arrayListOf<Int>()
-        println(height.count())
+
+        // looping twice
 //        for (i in 0 until height.count()){
 //            for (j in height.count()-1 downTo 0){
 //                println(i)
@@ -111,6 +108,8 @@ class Solution {
 //                areaArr.add( (j-i) * min(height[i], height[j]) )
 //            }
 //        }
+
+        //O(n) solution
         var start = 0
         var end = height.count()-1
         while (start < end){
@@ -120,22 +119,22 @@ class Solution {
                 start++
             else
                 end--
-
         }
-        println(areaArr)
         return areaArr.sortedDescending().first()
     }
 
+    fun lengthOfLastWord(s: String): Int? {
+        return null
+    }
 
 }
 
     fun main() {
-//    println(Test.root)
         val solution = Solution()
-//    Solution().romanToInt("MCMXCIV")
-//    Solution().twoSum(nums = intArrayOf(2,5,5,11), target = 10).forEach {
-//        println(it)
-//    }
+//        Solution().romanToInt("MCMXCIV")
+//        Solution().twoSum(nums = intArrayOf(2,5,5,11), target = 10).forEach {
+//          println(it)
+//        }
 //        println(solution.lengthOfLongestSubstring("abcabcbb"))
 //        println(solution.containsDuplicate( intArrayOf(1,1,1,3,3,4,3,2,4,2)) .toString())
 
