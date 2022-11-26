@@ -1,4 +1,4 @@
-package linkedList;
+package algos.lru;
 
 import java.util.HashMap;
 import java.util.Map;

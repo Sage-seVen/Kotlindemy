@@ -153,7 +153,22 @@ class Solution {
         return n == 1
     }
 
+    //Hackerearth telus practice test
+    fun readSimilarChars(){
+        val input = readLine()!!.split("").filter { it.isNotEmpty() }.map { it.toInt() }.toIntArray()
+        val input2 = readLine()!!.split("").filter { it.isNotEmpty() }.map { it.toInt() }.toIntArray()
+
+        var count = 0
+        for( i in 0 until input.size){
+            if(input[i] == input2[i]){
+                count++
+            }
+        }
+        println(count)
+    }
+
 }
+
 
     fun main() {
         val solution = Solution()
@@ -169,6 +184,7 @@ class Solution {
 //        solution.lengthOfLastWord("luffy is still joyboy")
 //        solution.lengthOfLastWord("   fly me   to   the moon  ")
 //        solution.isUgly(6)
+        solution.readSimilarChars()
 
         var arr : Array<Int> = arrayOf<Int>()
 
