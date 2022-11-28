@@ -167,6 +167,30 @@ class Solution {
         println(count)
     }
 
+    //Groupon practice test
+    /*
+     * Complete the 'fizzBuzz' function below.
+     *
+     * The function accepts INTEGER n as parameter.
+     */
+    fun fizzBuzz() {
+        val n = readLine()!!.trim().toInt()
+
+        for( i in 1..n){
+            val multipleOf3 : Boolean = i%3 ==0
+            val multipleOf5 : Boolean = i%5 ==0
+
+            if(multipleOf3 && multipleOf5){
+                println("FizzBuzz")
+            } else if( multipleOf3){
+                println("Fizz")
+            } else if( multipleOf5){
+                println("Buzz")
+            } else{
+                println(i)
+            }
+        }
+    }
 }
 
 
@@ -184,7 +208,8 @@ class Solution {
 //        solution.lengthOfLastWord("luffy is still joyboy")
 //        solution.lengthOfLastWord("   fly me   to   the moon  ")
 //        solution.isUgly(6)
-        solution.readSimilarChars()
+//        solution.readSimilarChars()
+        solution.fizzBuzz()
 
         var arr : Array<Int> = arrayOf<Int>()
 
