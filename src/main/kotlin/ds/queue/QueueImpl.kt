@@ -1,4 +1,4 @@
-package queue
+package ds.queue
 
 class QueueImpl<T>: Queue<T> {
 

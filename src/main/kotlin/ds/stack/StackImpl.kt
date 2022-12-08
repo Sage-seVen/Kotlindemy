@@ -1,4 +1,4 @@
-package stack
+package ds.stack
 
 class StackImpl<T: Any>: Stack<T> {
 

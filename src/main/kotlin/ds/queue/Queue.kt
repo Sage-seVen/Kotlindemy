@@ -1,4 +1,4 @@
-package queue
+package ds.queue
 
 interface Queue<T>{
     val count : Int
