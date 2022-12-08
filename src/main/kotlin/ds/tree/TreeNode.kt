@@ -38,4 +38,42 @@ class TreeNode<T>(val value : T) {
         }
     }
 
+    fun search(value: T): TreeNode<T>?{
+        var result : TreeNode<T>? = null
+
+        forEachDepthFirst {
+            if (it.value == value){
+                result = it
+                println("Value found $value")
+            }
+        }
+        return result
+    }
+
+    fun printEachLevel(){
+        var queue = QueueImpl<TreeNode<T>>()
+
+        var nodesLeftInCurrentLevel = 0
+
+        queue.enqueue(this)
+        while (queue.isEmpty.not()){
+            nodesLeftInCurrentLevel = queue.count
+
+            while (nodesLeftInCurrentLevel > 0){
+                val node = queue.dequeue()
+
+                if (node!=null){
+                    println("${node.value}")
+
+                    node.children.forEach { queue.enqueue(it) }
+
+                    nodesLeftInCurrentLevel--
+                } else{
+                    break
+                }
+            }
+
+        }
+    }
+
 }

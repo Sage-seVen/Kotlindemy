@@ -41,4 +41,9 @@ fun main(){
 
     //Bread-first
     tree.forEachLevelOrder { println(it.value) }
+
+    tree.search("V4")
+
+    println("*************************")
+    tree.printEachLevel()
 }
