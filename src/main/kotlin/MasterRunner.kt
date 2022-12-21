@@ -191,6 +191,58 @@ class Solution {
             }
         }
     }
+
+    //#485
+    fun findMaxConsecutiveOnes(nums: IntArray): Int {
+        var maxCount = 0
+        var currentCount = 0
+
+        for(i in nums.indices){
+            if(nums[i] == 1){
+                currentCount++
+            } else {
+                // storing maxcount and resetting current count once streak is broken
+                maxCount = maxOf(maxCount, currentCount)
+                currentCount = 0
+            }
+        }
+
+        maxCount = maxOf(maxCount, currentCount)
+        return maxCount
+    }
+
+    fun findNumbers(nums: IntArray): Int {
+        var count = 0
+        for(i in nums.indices){
+            if(nums[i].toString().split("").size % 2 == 0){
+                count++
+            }
+        }
+        return count
+    }
+
+    //#977
+    fun sortedSquares(nums: IntArray): IntArray {
+        //O(n) two pointer approach
+        var left = 0
+        var right = nums.size - 1
+        var outArr = mutableListOf<Int>()
+
+        while(left <= right){
+            if(nums[left]*nums[left] > nums[right]* nums[right]){
+               outArr.add(nums[left]*nums[left])
+                left++
+            }else{
+                outArr.add(nums[right]*nums[right])
+                right--
+            }
+        }
+
+        return outArr.reversed().toIntArray()
+
+        //Simpler approach
+        return nums.map{ it*it }.sorted().toIntArray()
+    }
 }
 
 
